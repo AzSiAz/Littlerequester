@@ -2,7 +2,7 @@
   "name": "littlerequester",
   "version": "1.0.0",
   "description": "A little module to request content from the web",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "mocha"
   },
@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/AzSiAz/Littlerequester#readme",
   "devDependencies": {
-    "chai": "^3.5.0"
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
   }
 }
