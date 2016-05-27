@@ -1,6 +1,7 @@
 # Littlerequester
 
 [![Build Status](https://travis-ci.org/AzSiAz/Littlerequester.svg?branch=master)](https://travis-ci.org/AzSiAz/Littlerequester)
+[![npm version](https://badge.fury.io/js/littlerequester.svg)](https://badge.fury.io/js/littlerequester)
 
 ## Test
 Tested for NodeJS 4, 5 and 6        
