@@ -4,9 +4,7 @@ const assert = require('chai').assert;
 const littlerequester = require("../lib/");
 
 describe('Test littlerequester', function () {
-
     describe('Test HTTP & HTTPS', function () {
-        //HTTP
         it("should support http requests", function (done) {
             this.timeout(10000);
             littlerequester({url: "http://example.com/", type: "raw"}).then((data) => {
@@ -14,8 +12,6 @@ describe('Test littlerequester', function () {
                 done();
             });
         });
-
-        // HTTPS
         it("should support https requests", function (done) {
             this.timeout(10000);
             littlerequester({url: "https://github.com", type: "raw"}).then((data) => {
