@@ -2,7 +2,6 @@
 
 [![Build Status](https://travis-ci.org/AzSiAz/Littlerequester.svg?branch=master)](https://travis-ci.org/AzSiAz/Littlerequester)
 [![npm version](https://badge.fury.io/js/littlerequester.svg)](https://badge.fury.io/js/littlerequester)
-[![Coverage Status](https://coveralls.io/repos/github/AzSiAz/Littlerequester/badge.svg?branch=master)](https://coveralls.io/github/AzSiAz/Littlerequester?branch=master)
 
 ## Test
 Tested for NodeJS 4, 5 and 6        
