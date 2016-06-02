@@ -1,6 +1,6 @@
 {
   "name": "littlerequester",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A little module to request content from the web",
   "main": "lib/index.js",
   "scripts": {

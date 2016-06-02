@@ -23,6 +23,8 @@ littlerequester({url: "http://example.com/", type: "raw"}).then(data => {
 ```
 Or
 ```js
+const littlerequester = require("littlerequester");
+
 littlerequester({url: "http://example.com/", type: "json"}).then(data => {
     console.log(data);
 }, e => {
@@ -30,6 +32,14 @@ littlerequester({url: "http://example.com/", type: "json"}).then(data => {
 });
 ```
 
+## littlerequester argument doc
+
+@param {Object} options An object with the following fields:
+    - "url" (String): Request url
+    - "type" (String): Return data type either json or raw
+    - "headers" (Object): Object with header to use in request (ex: user-agent)
+
 ## Release History
 
+* 0.2.0 Add headers support
 * 0.1.0 Initial release
