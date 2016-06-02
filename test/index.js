@@ -79,14 +79,6 @@ describe('Test littlerequester', function () {
                 done();
             })
         });
-        it("Should query GitHub api with basic user-agent header", function (done) {
-            this.timeout(10000);
-            littlerequester({url: "https://api.github.com/users/AzSiAz", type: "json"}).then(function(data) {
-                assert.equal(typeof data.data, "object");
-                assert.equal(data.data.login, "AzSiAz");
-                done();
-            })
-        });
         it("Should return littlerequest header", function (done) {
             this.timeout(10000);
             littlerequester({url: "http://headers.jsontest.com", type: "json", headers: {"User-Agent":"LittleRequester", "test":"test"}}).then(function(data) {
