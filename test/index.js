@@ -28,7 +28,7 @@ describe('Test littlerequester', function () {
             }
         });
         it("should return a correct object", function () {
-            let parsedObject = parser(object);
+            var parsedObject = parser(object);
             assert.equal(parsedObject.type, object.type);
             assert.equal(parsedObject.request.headers['User-Agent'], object.headers['User-Agent']);
             assert.equal(object.url.includes(parsedObject.request.hostname), true);
