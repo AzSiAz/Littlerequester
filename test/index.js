@@ -2,8 +2,8 @@
 
 let assert = require('chai').assert;
 let should = require('chai').should;
-let littlerequester = require("../lib/").littlerequester;
-let parser = require("../lib/").parseObject;
+let littlerequester = require("../lib/index");
+let parser = require("../lib/parseObject");
 let object = {};
 let partialObject = {};
 let incorrectObject = {};
