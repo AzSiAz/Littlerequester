@@ -1,12 +1,12 @@
 "use strict";
 
-let assert = require('chai').assert;
-let should = require('chai').should;
-let littlerequester = require("../lib/index");
-let parser = require("../lib/parseobject");
-let object = {};
-let partialObject = {};
-let incorrectObject = {};
+var assert = require('chai').assert;
+var should = require('chai').should;
+var littlerequester = require("../lib/index");
+var parser = require("../lib/parseobject");
+var object = {};
+var partialObject = {};
+var incorrectObject = {};
 
 describe('Test littlerequester', function () {
     
