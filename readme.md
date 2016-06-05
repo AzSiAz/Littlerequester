@@ -9,7 +9,7 @@ Tested for NodeJS 4, 5 and 6
 ```sh
 $ npm i littlerequester --save
 ```
-    
+
 ## Usage
 ```js
 const littlerequester = require("littlerequester");
@@ -34,10 +34,10 @@ littlerequester({url: "http://example.com/", type: "json"}).then(data => {
 
 ## littlerequester argument doc
 
-@param {Object} options An object with the following fields:        
-    - "url" (String): Request url       
-    - "type" (String): Return data type either json or raw      
-    - "headers" (Object): Object with header to use in request (ex: user-agent)         
+param - Object : options An object with the following fields:        
+- url - String : Request url       
+- type - String : Return data type either json or raw      
+- headers - Object : Object with header to use in request (ex: user-agent)         
 
 ## Release History
 
