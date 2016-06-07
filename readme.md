@@ -11,13 +11,28 @@ Support GET, POST, PUT, PATCH, DELETE request type
 
 ## Test
 Tested for NodeJS 4, 5 and 6     
-        
+
 ## Installation
 ```sh
 $ npm i littlerequester --save
 ```
 
 ## Usage
+With just a string
+```js
+const littlerequester = require("littlerequester");
+
+// Make a request to example.com
+littlerequester("http://example.com/").then(data => {
+    // Get raw Data
+    console.log(data.data);
+    // Get node http response object
+    console.log(data.res);
+}, e => {
+    console.log(e);
+})
+```
+Or with a more complex object
 ```js
 const littlerequester = require("littlerequester");
 
@@ -47,6 +62,10 @@ littlerequester({url: "https://example.com/", type: "json"}).then(data => {
 
 ## littlerequester argument doc
 
+param - String : An url          
+
+OR    
+
 param - Object : options An object with the following fields:        
 - url - String : Request url       
 - type - String : Return data type either json or raw      
@@ -56,6 +75,7 @@ param - Object : options An object with the following fields:
 
 ## Release History
 
+* 0.4.0 add request with just an url
 * 0.3.0 add POST, PUT, PATCH, DELETE request type
 * 0.2.0 Add headers support
 * 0.1.0 Initial release
