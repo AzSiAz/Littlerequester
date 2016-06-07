@@ -23,6 +23,7 @@ With just a string
 const littlerequester = require("littlerequester");
 
 // Make a request to example.com
+// you can also directly get json like this -> littlerequester("http://example.com/", "json")
 littlerequester("http://example.com/").then(data => {
     // Get raw Data
     console.log(data.data);
