@@ -64,19 +64,20 @@ littlerequester({url: "https://example.com/", type: "json"}).then(data => {
 
 2 params
 - url - String : An url      
-- type? - String : json or raw (default to raw) - Optionnal       
+- type? - String : json or raw (default to raw) - Optional       
 
 OR    
 
-param - Object : options An object with the following fields:        
+param - Object : options An object with the following fields :        
 - url - String : Request url       
 - type - String : Return data type either json or raw      
 - headers - Object : Object with header to use in request (ex: user-agent)    
-- method? - String : GET, POST, PUT, PATCH, DELETE default to GET if not provided - Optionnal     
-- data? - Object : Valid Object for POST, PUT and PATCH request - Optionnal     
+- method? - String : GET, POST, PUT, PATCH, DELETE default to GET if not provided - Optional     
+- data? - Object : Valid Object for POST, PUT and PATCH request - Optional     
 
 ## Release History
 
+* 0.5.0 add 2nd arg (type - Optional) for request with just a string
 * 0.4.0 add request with just an url
 * 0.3.0 add POST, PUT, PATCH, DELETE request type
 * 0.2.0 Add headers support
