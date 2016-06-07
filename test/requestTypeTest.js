@@ -17,9 +17,27 @@ describe('Test Request type', function() {
           });
       });
 
+      it('Should return JSON (2 args)', function (done) {
+          this.timeout(10000);
+          littlerequester("http://jsonplaceholder.typicode.com/posts/1", "json").then(function(data) {
+              assert.equal(typeof data.data, "object");
+              assert.equal(data.data.id, 1);
+              done();
+          });
+      });
+
       it('Should return Raw Data', function (done) {
           this.timeout(10000);
           littlerequester({url: "http://monip.org", type: "raw"}).then(function(data) {
+              assert.equal(typeof data.data, "string");
+              assert.equal(!!/IP/gi.test(data.data), true);
+              done();
+          });
+      });
+
+      it('Should return Raw Data (2 args)', function (done) {
+          this.timeout(10000);
+          littlerequester("http://monip.org", "raw").then(function(data) {
               assert.equal(typeof data.data, "string");
               assert.equal(!!/IP/gi.test(data.data), true);
               done();
