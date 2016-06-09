@@ -5,14 +5,13 @@
 
 "use strict";
 
-// import url = require("url");
 import * as url from 'url';
 import * as querystring from 'querystring';
 
 function parseObject(object, typeopt:string) {
 
   let data:any = {type: "", request: {}};
-  url.parse
+
   if (typeof object != "object") {
     if (typeof object === "string" && /http/g.test(object)) {
       data.request = url.parse(object);
