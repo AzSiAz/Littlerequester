@@ -2,7 +2,7 @@
 
 var assert = require('chai').assert;
 var should = require('chai').should;
-var littlerequester = require("../lib/index");
+var littlerequester = require("../dist/index");
 
 
 describe('Test littlerequester', function () {

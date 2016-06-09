@@ -2,7 +2,7 @@
 
 var assert = require('chai').assert;
 var should = require('chai').should;
-var littlerequester = require("../lib/index");
+var littlerequester = require("../dist/index");
 
 
 describe('Test Request type', function() {
@@ -10,18 +10,18 @@ describe('Test Request type', function() {
   describe('GET Method', function () {
       it('Should return JSON', function (done) {
           this.timeout(10000);
-          littlerequester({url: "http://jsonplaceholder.typicode.com/posts/1", type: "json"}).then(function(data) {
+          littlerequester({url: "http://reqres.in/api/users/2", type: "json"}).then(function(data) {
               assert.equal(typeof data.data, "object");
-              assert.equal(data.data.id, 1);
+              assert.equal(data.data.data.id, 2);
               done();
           });
       });
 
       it('Should return JSON (2 args)', function (done) {
           this.timeout(10000);
-          littlerequester("http://jsonplaceholder.typicode.com/posts/1", "json").then(function(data) {
+          littlerequester("http://reqres.in/api/users/2", "json").then(function(data) {
               assert.equal(typeof data.data, "object");
-              assert.equal(data.data.id, 1);
+              assert.equal(data.data.data.id, 2);
               done();
           });
       });

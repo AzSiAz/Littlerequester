@@ -5,27 +5,29 @@
 
 "use strict";
 
-var url = require("url");
-var querystring = require("querystring");
+// import url = require("url");
+import * as url from 'url';
+import * as querystring from 'querystring';
 
-function parseObject(object, typeopt) {
+function parseObject(object, typeopt:string) {
 
-  var data = {type: "", request:{}};
-  data.type = (object.type) ? object.type : "raw"
-
+  let data:any = {type: "", request: {}};
+  url.parse
   if (typeof object != "object") {
     if (typeof object === "string" && /http/g.test(object)) {
-      data.request = url.parse(object)
+      data.request = url.parse(object);
       data.type = (typeopt) ? typeopt : "raw";
       data.request.headers = {
         "User-Agent": "LittleRequester"
-      }
+      };
       data.request.method = correctMethod(undefined);
       return data;
     }
     else throw new Error("Not a String or an Object");
   }
 
+  data.type = (object.type) ? object.type : "raw";
+  
   if (typeof object.url === "string" && /http/g.test(object.url)) {
     data.request = url.parse(object.url);
     data.request.method = correctMethod(object.method);
@@ -41,7 +43,7 @@ function parseObject(object, typeopt) {
   else {
     data.request.headers = {
       "User-Agent": "LittleRequester"
-    }
+    };
   }
 
   // TODO add file support
@@ -91,4 +93,4 @@ function correctMethod(method) {
     }
 }
 
-module.exports = parseObject;
+export = parseObject
