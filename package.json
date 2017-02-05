@@ -24,6 +24,6 @@
   "homepage": "https://github.com/AzSiAz/Littlerequester#readme",
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^2.5.3"
+    "mocha": "^3.2.0"
   }
 }
