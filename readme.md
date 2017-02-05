@@ -1,5 +1,7 @@
 # Littlerequester
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/AzSiAz/Littlerequester.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/AzSiAz/Littlerequester.svg?branch=master)](https://travis-ci.org/AzSiAz/Littlerequester)
 [![npm version](https://img.shields.io/npm/v/littlerequester.svg)](https://www.npmjs.com/package/littlerequester)
 <!--[![Downloads](https://img.shields.io/npm/dt/littlerequester.svg)](https://www.npmjs.com/package/littlerequester)-->
