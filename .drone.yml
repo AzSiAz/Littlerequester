@@ -8,7 +8,6 @@ steps:
   - npm install
   - npm test
 
-steps:
 - name: npm
   image: plugins/npm
   settings:
