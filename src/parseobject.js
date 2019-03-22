@@ -37,12 +37,12 @@ const ContentLengthHeaderName = "Content-Length"
  * @property {string=} method
  * @property {Object=} data
  * 
- * 
+ * Parse raw options object to return options to be used by node http/https internal module
  * @param {Raw | string} rawData 
- * @param {string} [typeOpt="raw"]
+ * @param {string} typeOpt
  * @returns {ParsedObject}
  */
-const parseObject = (rawData, typeOpt = 'raw') => {
+const parseOptions = (rawData, typeOpt) => {
     /** @type {ParsedObject} data */
     let data = {}
 
@@ -121,5 +121,5 @@ const selectCorrectMethod = (method = undefined) => {
 
 module.exports = {
     selectCorrectMethod,
-    parseObject
+    parseOptions
 }

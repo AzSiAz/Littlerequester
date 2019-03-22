@@ -1,6 +1,4 @@
-"use strict";
-
-var littlerequester = require("../src");
+const littlerequester = require("../src");
 
 
 describe('Test littlerequester', () => {

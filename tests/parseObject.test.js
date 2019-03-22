@@ -1,5 +1,5 @@
 const querystring = require("querystring")
-const { parseObject } = require("../src/parseObject")
+const { parseOptions } = require("../src/parseObject")
 
 let object = {}
 let partialObject = {}
@@ -9,7 +9,7 @@ let putObject = {}
 let delObject = {}
 
 
-describe('ParseObject function', () => {
+describe('parseOptions function', () => {
     beforeAll(function () {
         object = {
             url: "http://example.com/",
@@ -52,11 +52,11 @@ describe('ParseObject function', () => {
     })
 
     test("should not pass if not an url", () => {
-        expect(() => { parseObject("test") }).toThrow(/Object/)
+        expect(() => { parseOptions("test") }).toThrow(/Object/)
     })
 
     test("should return a correct object", () => {
-        const parsedObject = parseObject(object)
+        const parsedObject = parseOptions(object)
 
         expect(parsedObject.type).toBe(object.type)
         expect(parsedObject.request.headers['User-Agent']).toBe(object.headers['User-Agent'])
@@ -64,27 +64,27 @@ describe('ParseObject function', () => {
     })
 
     test("should return a correct object for POST request", () => {
-        const parsedObject = parseObject(postObject)
+        const parsedObject = parseOptions(postObject)
 
         expect(parsedObject.request.method).toBe(postObject.method)
         expect(parsedObject.request.headers['Content-Type']).toBe("application/x-www-form-urlencoded")
         expect(parsedObject.request.headers['Content-Length']).toBe(querystring.stringify(postObject.data).length)
     })
     test("should return a correct object for PUT request", () => {
-        const parsedObject = parseObject(putObject)
+        const parsedObject = parseOptions(putObject)
 
         expect(parsedObject.request.method).toBe(putObject.method)
         expect(parsedObject.request.headers['Content-Type']).toBe("application/x-www-form-urlencoded")
         expect(parsedObject.request.headers['Content-Length']).toBe(querystring.stringify(putObject.data).length)
     })
     test("should return a correct object for DELETE request", () => {
-        const parsedObject = parseObject(delObject)
+        const parsedObject = parseOptions(delObject)
 
         expect(parsedObject.request.method).toBe(delObject.method)
     })
 
     test("should pass even if only url is correct", () => {
-        const parsedObject = parseObject(partialObject)
+        const parsedObject = parseOptions(partialObject)
 
         expect(parsedObject.type).toBe("raw")
         expect(parsedObject.request.headers['User-Agent']).toBe("LittleRequester")
@@ -92,7 +92,7 @@ describe('ParseObject function', () => {
     })
 
     test("should not pass if incorrect object", () => {
-        expect(() => { parseObject(incorrectObject) }).toThrow(/url/)
+        expect(() => { parseOptions(incorrectObject) }).toThrow(/url/)
     })
 
 })
