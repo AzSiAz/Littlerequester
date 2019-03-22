@@ -17,3 +17,8 @@ steps:
       from_secret: npm_password
     email:
       from_secret: npm_email
+  when:
+    status:
+    - success
+    event:
+    - tag
