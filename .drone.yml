@@ -7,3 +7,14 @@ steps:
   commands:
   - npm install
   - npm test
+
+steps:
+- name: npm
+  image: plugins/npm
+  settings:
+    username:
+      from_secret: npm_username
+    password:
+      from_secret: npm_password
+    email:
+      from_secret: npm_email
