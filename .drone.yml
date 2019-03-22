@@ -3,7 +3,7 @@ name: default
 
 steps:
 - name: testing drone with node
-  image: node
+  image: node:11-alpine
   commands:
   - npm install
   - npm test
