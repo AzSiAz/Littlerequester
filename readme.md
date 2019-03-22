@@ -1,6 +1,6 @@
 # Littlerequester
 
-[![Build Status](https://travis-ci.org/AzSiAz/Littlerequester.svg?branch=master)](https://travis-ci.org/AzSiAz/Littlerequester)
+[![Build Status](https://drone.azs.moe/api/badges/AzSiAz/Littlerequester/status.svg)](https://drone.azs.moe/AzSiAz/Littlerequester)
 [![npm version](https://img.shields.io/npm/v/littlerequester.svg)](https://www.npmjs.com/package/littlerequester)
 <!--[![Downloads](https://img.shields.io/npm/dt/littlerequester.svg)](https://www.npmjs.com/package/littlerequester)-->
 
