@@ -2,13 +2,13 @@ kind: pipeline
 name: default
 
 steps:
-- name: testing drone with node
-  image: node:11-alpine
+- name: test
+  image: node:11
   commands:
   - npm install
   - npm test
 
-- name: npm
+- name: Publish to NPM
   image: plugins/npm
   settings:
     username:

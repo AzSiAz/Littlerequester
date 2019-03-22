@@ -2,7 +2,7 @@
   "name": "littlerequester",
   "version": "0.6.2",
   "description": "A little module to request content from the web",
-  "main": "dist/index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "jest",
     "test:w": "jest --watch"
