@@ -1,21 +1,17 @@
-"use strict";
-
-var assert = require('chai').assert;
-var should = require('chai').should;
-var littlerequester = require("../dist/index");
+const littlerequester = require("../src");
 
 
 describe('Test Request type', () => {
 
     describe('GET Method', () => {
         test('Should return JSON', async () => {
-            const { data } = await littlerequester({url: "http://reqres.in/api/users/2", type: "json"})
+            const { data } = await littlerequester({url: "https://reqres.in/api/users/2", type: "json"})
             expect(typeof data).toBe("object")
             expect(data.data.id).toBe(2)
       }, 10000)
 
         test('Should return JSON (2 args)', async () => {
-            const { data } = await littlerequester("http://reqres.in/api/users/2", "json")
+            const { data } = await littlerequester("https://reqres.in/api/users/2", "json")
             expect(typeof data).toBe("object")
             expect(data.data.id).toBe(2)
       }, 10000)
@@ -44,7 +40,7 @@ describe('Test Request type', () => {
     describe("POST Request", () => {
 
         test("Should make a post request", async () => {
-            const { data } = await littlerequester({url: "http://reqres.in/api/users", type: "json", method: "POST", data: {"name": "morpheus", "job": "leader"}})
+            const { data } = await littlerequester({url: "https://reqres.in/api/users", type: "json", method: "POST", data: {"name": "morpheus", "job": "leader"}})
             expect(typeof data).toBe("object")
             expect(data.job).toBe("leader")
         }, 10000)
@@ -53,8 +49,8 @@ describe('Test Request type', () => {
 
     describe("PUT Request", () => {
 
-        test("Should make a put request", done => {
-            const { data } = await littlerequester({url: "http://reqres.in/api/users/2", type: "json", method: "PUT", data: {"name": "morpheus", "job": "zion resident"}})
+        test("Should make a put request", async () => {
+            const { data } = await littlerequester({url: "https://reqres.in/api/users/2", type: "json", method: "PUT", data: {"name": "morpheus", "job": "zion resident"}})
             expect(typeof data).toBe("object")
             expect(data.job).toBe("zion resident")
         }, 10000)
@@ -63,8 +59,8 @@ describe('Test Request type', () => {
 
     describe("PATCH Request", () => {
 
-        test("Should make a patch request", done => {
-            const { data } = await littlerequester({url: "http://reqres.in/api/users/2", type: "json", method: "PATCH", data: {"name": "morpheus", "job": "zion"}})
+        test("Should make a patch request", async () => {
+            const { data } = await littlerequester({url: "https://reqres.in/api/users/2", type: "json", method: "PATCH", data: {"name": "morpheus", "job": "zion"}})
             expect(typeof data).toBe("object")
             expect(data.job).toBe("zion")
         })
@@ -73,8 +69,8 @@ describe('Test Request type', () => {
 
     describe("DELETE Request", () => {
 
-        test("Should make a delete request", done => {
-            const { res } = await littlerequester({url: "http://reqres.in/api/users/2", type: "raw", method: "DELETE"})
+        test("Should make a delete request", async () => {
+            const { res } = await littlerequester({url: "https://reqres.in/api/users/2", type: "raw", method: "DELETE"})
             expect(res.statusCode).toBe(204)
         }, 10000)
 

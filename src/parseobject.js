@@ -33,7 +33,7 @@ const ContentLengthHeaderName = "Content-Length"
  * @typedef {Object} Raw
  * @property {string=} type
  * @property {string=} url
- * @property {string=} headers
+ * @property {Object=} headers
  * @property {string=} method
  * @property {Object=} data
  * 

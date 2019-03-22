@@ -17,12 +17,10 @@ module.exports = (options, typeData = 'raw') => new Promise((resolve, reject) =>
         let str = ''
 
         response
-            .on('data', chunk => str += chunk)
+            .on('data', chunk => { str += chunk.toString() })
             .on('error', err => reject(err))
             .on('end', () => {
                 if (opts.type.toLowerCase() === 'raw') return resolve({ data: str, res: response })
-
-                console.log(str)
 
                 const json = JSON.parse(str)
 
