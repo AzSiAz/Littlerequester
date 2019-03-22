@@ -39,7 +39,7 @@ const ContentLengthHeaderName = "Content-Length"
  * 
  * Parse raw options object to return options to be used by node http/https internal module
  * @param {Raw | string} rawData 
- * @param {string} typeOpt
+ * @param {string=} typeOpt
  * @returns {ParsedObject}
  */
 const parseOptions = (rawData, typeOpt) => {
