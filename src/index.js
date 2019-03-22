@@ -1,11 +1,11 @@
 const http = require('http')
 const https = require('https')
 
-const { parseOptions } = require('./parseObject')
+const { parseOptions } = require('./parse')
 
 
 /**
- * @param {string | import("./parseobject").Raw} options
+ * @param {string | import("./parse").Raw} options
  * @param {string} [typeData="raw"]
  */
 module.exports = (options, typeData = 'raw') => new Promise((resolve, reject) => {

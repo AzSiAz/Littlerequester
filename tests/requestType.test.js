@@ -1,4 +1,4 @@
-const littlerequester = require("./../src");
+const littlerequester = require("./../src/index");
 
 
 describe('Test Request type', () => {

@@ -1,5 +1,5 @@
 const querystring = require("querystring")
-const { parseOptions } = require("./../src/parseObject")
+const { parseOptions } = require("../src/parse")
 
 let object = {}
 let partialObject = {}
