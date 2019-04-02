@@ -21,7 +21,7 @@ steps:
 - name: code-analysis
   image: aosapps/drone-sonar-plugin
   settings:
-      sonar_host:
+      SONAR_HOST:
         from_secret: sonar_host
-      sonar_token:
+      SONAR_TOKEN:
         from_secret: sonar_token
