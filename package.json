@@ -25,6 +25,7 @@
   "homepage": "https://github.com/AzSiAz/Littlerequester#readme",
   "devDependencies": {
     "@types/jest": "^24.0.11",
+    "coveralls": "^3.0.3",
     "jest": "^24.5.0"
   }
 }
