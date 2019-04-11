@@ -4,7 +4,7 @@
   "description": "A little module to request content from the web",
   "main": "src/index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "test:w": "jest --watch"
   },
   "repository": {
